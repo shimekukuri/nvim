@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use { "catppuccin/nvim", as = "catppuccin" }
+  use {'morhetz/gruvbox', as = "gruvbox" }
 
   use({ 'svrana/neosolarized.nvim' })
 

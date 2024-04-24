@@ -30,13 +30,30 @@ Group.new("DiagnosticUnderlineError", colors.none, colors.none, styles.undercurl
 Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
 Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)
 Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)]]--
+
+-- Define a custom highlight group for letters and symbols
+--Symbol_pattern = ".*"  -- Match one or more characters that are not whitespace
+--Symbol_group = "LettersAndSymbols"
+
+-- Set the syntax highlighting for the custom group
 function ColorsMyPencils(color)
     color = color or "catppuccin"
     vim.cmd.colorscheme(color)
 
+    --vim.cmd(string.format("syntax match %s /%s/", Symbol_group, Symbol_pattern))
+    --vim.cmd(string.format("highlight %s guibg=black", Symbol_group))
+
     vim.api.nvim_set_hl(0, "Normal", {bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloats", {bg = "none" })
     vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+    --vim.api.nvim_set_hl(0, "Symbol_group", { bg = "black" })
 end
 
 ColorsMyPencils()
+
+--vim.cmd([[
+--    augroup MyCustomColors
+--        autocmd!
+--        autocmd BufEnter * lua ColorsMyPencils()
+--    augroup END
+--]])

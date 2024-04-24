@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/james/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/Users/james/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/james/.local/share/nvim/site/pack/packer/start/harpoon",

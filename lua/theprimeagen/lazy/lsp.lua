@@ -24,7 +24,6 @@ return {
         require("fidget").setup({})
         require("mason").setup()
 
-        -- Define servers configuration (you can add more servers here)
         local servers = {
             lua_ls = {
                 settings = {
@@ -41,7 +40,7 @@ return {
                 settings = {
                     zls = {
                         enable_inlay_hints = true,
-                        enable_snippets = true,
+                        enable_snippets = false,
                         warn_style = true,
                     },
                 },
